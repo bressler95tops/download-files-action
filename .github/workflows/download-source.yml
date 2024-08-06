@@ -21,6 +21,16 @@ jobs:
           cd download
           touch readme.md
           wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/README.md -O readme.md
+          mkdir Module_1
+          mkdir Module_2
+          mkdir Module_3
+          mkdir Module_4
+          mkdir Module_5
+          touch Module_1/readme.md
+          touch Module_2/readme.md
+          touch Module_3/readme.md
+          touch Module_4/readme.md
+          touch Module_5/readme.md
       - name: Commit and push changes
         run: |
           git config --global user.name "bressler95tops"
