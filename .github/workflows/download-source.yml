@@ -6,21 +6,16 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v2
-      - name: List files in the repo before deleting target
-        run: ls
       - name: Delete target folder
         run: rm -rf download
-      - name: List files in the repo after deleting target
-        run: ls
       - name: Create target folder
         run: mkdir download
       - name: List files in the repo after creating target
         run: ls
-      - name: Change directory into target
+      - name: Build Directory Structure
         run: |
           cd download
           touch readme.md
-          wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/README.md -O readme.md
           mkdir Module_1
           mkdir Module_2
           mkdir Module_3
@@ -31,6 +26,10 @@ jobs:
           touch Module_3/readme.md
           touch Module_4/readme.md
           touch Module_5/readme.md
+      - name: Download Files
+        run: |
+          cd download
+          wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/README.md -O readme.md
       - name: Commit and push changes
         run: |
           git config --global user.name "bressler95tops"
