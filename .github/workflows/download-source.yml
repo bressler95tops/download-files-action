@@ -6,10 +6,20 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v2
-      - name: List files, see what actually exists
+      - name: List files in the repo before deleting target
         run: ls
+      - name: Delete target folder
+        run: rm -rf download
+      - name: List files in the repo after deleting target
+        run: ls
+      - name: Create target folder
+        run: mkdir download
+      - name: List files in the repo after creating target
+        run: ls
+      - name: Change directory into target
+        run: cd download
       - name: Download a file
-        run: wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/README.md -O download/folder/readme.md
+        run: wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/README.md
       - name: Commit and push changes
         run: |
           git config --global user.name "bressler95tops"
