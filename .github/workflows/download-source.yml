@@ -37,5 +37,5 @@ jobs:
           git config --global user.email "briancressler@gmail.com"
 
           git add -A
-          git commit -m "commit message"
+          git commit -m "Download OS101 Files"
           git push
