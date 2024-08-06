@@ -15,12 +15,12 @@ jobs:
       - name: Build Directory Structure
         run: |
           cd download
-          touch readme.md
           mkdir Module_1
           mkdir Module_2
           mkdir Module_3
           mkdir Module_4
           mkdir Module_5
+          touch readme.md
           touch Module_1/readme.md
           touch Module_2/readme.md
           touch Module_3/readme.md
@@ -30,6 +30,11 @@ jobs:
         run: |
           cd download
           wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/README.md -O readme.md
+          wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/Module_1/readme.md -O Module_1/readme.md
+          wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/Module_2/readme.md -O Module_2/readme.md
+          wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/Module_3/readme.md -O Module_3/readme.md
+          wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/Module_4/readme.md -O Module_4/readme.md
+          wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/Module_5/readme.md -O Module_5/readme.md
       - name: Commit and push changes
         run: |
           git config --global user.name "bressler95tops"
