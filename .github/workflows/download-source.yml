@@ -17,11 +17,10 @@ jobs:
       - name: List files in the repo after creating target
         run: ls
       - name: Change directory into target
-        run: cd download
-      - name: Create a file
-        run: touch readme.md
-      - name: Overwrite a file
-        run: wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/README.md -O readme.md
+        run: |
+          cd download
+          touch readme.md
+          wget https://raw.githubusercontent.com/nasa/Transform-to-Open-Science/open-science-101/README.md -O readme.md
       - name: Commit and push changes
         run: |
           git config --global user.name "bressler95tops"
