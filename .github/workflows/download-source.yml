@@ -41,6 +41,11 @@ jobs:
           mkdir Module_3/Lesson_3
           mkdir Module_3/Lesson_4
           mkdir Module_3/Lesson_5
+          mkdir Module_4/Lesson_1
+          mkdir Module_4/Lesson_2
+          mkdir Module_4/Lesson_3
+          mkdir Module_4/Lesson_4
+          mkdir Module_4/Lesson_5
           touch Module_1/Lesson_1/readme.md
           touch Module_1/Lesson_2/readme.md
           touch Module_1/Lesson_3/readme.md
@@ -56,6 +61,11 @@ jobs:
           touch Module_3/Lesson_3/readme.md
           touch Module_3/Lesson_4/readme.md
           touch Module_3/Lesson_5/readme.md
+          touch Module_4/Lesson_1/readme.md
+          touch Module_4/Lesson_2/readme.md
+          touch Module_4/Lesson_3/readme.md
+          touch Module_4/Lesson_4/readme.md
+          touch Module_4/Lesson_5/readme.md
       - name: Download Files
         run: |
           cd download
